@@ -19,6 +19,12 @@ $mes[] ='Setetembro';
 $mes[] ='Outubro';
 $mes[] ='Novembro';
 $mes[] ='Dezembro';
+
+$nMes = date('m');
+
+$cMes = $mes[ltrim($nMes, "0")];
+
+$dataAtual = date("d/m/Y");
 ?>
 
 <div class="col-md-6 col-md-offset-3 text-center">
@@ -84,7 +90,7 @@ $mes[] ='Dezembro';
                     <div class="footer">
                         <hr />
                         <div class="stats">
-                            <i class="ti-reload"></i>A receber no mês de <?php echo $mes[date('m')]?> (S/ Juros)
+                            <i class="ti-reload"></i>A receber no mês de <?php echo $cMes;?> (S/ Juros)
                         </div>
                     </div>
                 </div>
@@ -110,7 +116,7 @@ $mes[] ='Dezembro';
                     <div class="footer">
                         <hr />
                         <div class="stats">
-                            <i class="ti-calendar"></i>A pagar no mês de <?php echo $mes[date('m')]?> (S/ Juros)
+                            <i class="ti-calendar"></i>A pagar no mês de <?php echo $cMes;?> (S/ Juros)
                         </div>
                     </div>
                 </div>
